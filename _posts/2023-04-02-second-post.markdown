@@ -4,6 +4,7 @@ title:  "My Second Post"
 date:   2 April 2023
 categories: sandbox
 ---
+<!-- TODO: move aside to the bottom of the paragraph. reading on mobile, the asides appear at the top of the paragraph, which doesn't make sense -->
 <aside name="first" markdown="1">
 By the way, this is my first aside using a simpler way.
 </aside>
@@ -26,6 +27,7 @@ def print_hi(name)
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
+print_hi('This is a very loooooooooooooooooooooooooooooooooooooooooooooooooooong name')
 {% endhighlight %}
 
 Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
