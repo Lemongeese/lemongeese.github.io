@@ -42,6 +42,9 @@ In this day and age, it seems like this community is largely dead. Jekyll does 2
 1. convert markdown to an actual site
 2. "host" the site
 
+## Rendering math symbols
+Let $$x=2$$. 
+
 
 
 [jekyll-docs]: https://jekyllrb.com/docs/home
