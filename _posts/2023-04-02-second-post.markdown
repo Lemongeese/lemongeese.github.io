@@ -42,6 +42,8 @@ In this day and age, it seems like this community is largely dead. Jekyll does 2
 1. convert markdown to an actual site
 2. "host" the site
 
+
+
 [jekyll-docs]: https://jekyllrb.com/docs/home
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
