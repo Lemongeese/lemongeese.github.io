@@ -43,7 +43,15 @@ In this day and age, it seems like this community is largely dead. Jekyll does 2
 2. "host" the site
 
 ## Rendering math symbols
-Let $$x=2$$. 
+Let $$x=2$$. Or how about let $$x=\pi$$.
+
+$$
+\begin{align*}
+e^{\pi i} &= \cos(\pi) + i\sin(\pi) \\
+          &= -1 + 0 \\
+          &= -1
+\end{align*}
+$$
 
 
 
