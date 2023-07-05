@@ -207,6 +207,11 @@
   @include relative-font-size(1.5);
 }
 
+.wrapper {
+  background-color: white;
+  box-shadow: 0 0 40px rgba(71, 51, 31, 0.2);
+}
+
 
 
 /**
@@ -253,3 +258,27 @@
     }
   }
 }
+
+/**
+ * Home page
+ */
+
+summary {
+  cursor: pointer;
+}
+
+details {
+  font-size: 32px;
+  margin-bottom: $spacing-unit * 2;
+}
+
+details > summary {
+  border-bottom: solid 2px black;
+  
+}
+/**
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
+details[open] > summary {
+  
+}
+*/
