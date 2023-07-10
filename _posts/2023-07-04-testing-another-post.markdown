@@ -4,6 +4,12 @@ title:  "Welcome TWO Jekyll! This is a very, very, very long title to see if wra
 date:   2023-07-04 21:11:53 -0700
 categories: jekyll update
 ---
+
+This equation, $$e^{i\pi} = -1$$, is an inline Latex expression.
+On the other hand, this one gets its own paragraph:
+
+$$e^{i\pi} = -1$$
+
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
 Jekyll requires blog post files to be named according to the following format:
