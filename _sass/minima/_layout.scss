@@ -2,9 +2,10 @@
  * Site header
  */
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  border-top: 0px solid $grey-color-dark;
   border-bottom: 1px solid $grey-color-light;
   min-height: $spacing-unit * 1.865;
+  margin-bottom: $spacing-unit;
 
   // Positioning context for the mobile navigation icon
   position: relative;
@@ -176,7 +177,7 @@
  * Page content
  */
 .page-content {
-  padding: $spacing-unit 0;
+  padding: 0 0;
   flex: 1;
 }
 
@@ -219,6 +220,7 @@
  */
 .post-header {
   margin-bottom: $spacing-unit;
+  margin-top: $spacing-unit * 2;
 }
 
 .post-title {
@@ -268,8 +270,8 @@ summary {
 }
 
 details {
-  font-size: 32px;
-  margin-bottom: $spacing-unit * 2;
+  @include relative-font-size(1.625);
+  margin-bottom: $spacing-unit;
 }
 
 details > summary {

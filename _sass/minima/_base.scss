@@ -181,7 +181,7 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit;
   padding-left: $spacing-unit;
-  padding-top: $spacing-unit * 1.5;
+  padding-top: $spacing-unit;
   @extend %clearfix;
 
   @include media-query($on-laptop) {

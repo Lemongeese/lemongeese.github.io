@@ -13,27 +13,17 @@ $$
 
 Check out [this link](https://stackoverflow.com/questions/26275645/how-to-support-latex-in-github-pages) for more information.
 
-Pasting from my Obsidian vault:
-
-Cross product, $\overset{\rightharpoonup}{x}=\overset{\rightharpoonup}{v}\times \overset{\rightharpoonup}{w}$, properties:
-1. Perpendicular: $\overset{\rightharpoonup}{x}\cdot \overset{\rightharpoonup}{v}=\overset{\rightharpoonup}{x}\cdot\overset{\rightharpoonup}{w}=0$
-2. Area: $\overset{\rightharpoonup}{x}=\text{area of parallelogram spanned by}\overset{\rightharpoonup}{v} \text{ and } \overset{\rightharpoonup}{w}=\|\|\overset{\rightharpoonup}{v}\|\| \text{ } \|\|\overset{\rightharpoonup}{w}\|\| \sin\theta$
-3. Sign (right hand rule): index along axis of first, middle finger along second.
-
-
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
-
-Jekyll requires blog post files to be named according to the following format:
-
-`YEAR-MONTH-DAY-title.MARKUP`
-
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
-
 Jekyll also offers powerful support for code snippets:
 
 ```python
 def foo():
   pass # whatever
+```
+
+```cpp
+void foo() {%raw%}{{%endraw%}
+  return 0;
+{%raw%}}{%endraw%}
 ```
 
 I just lost all my work. :(
@@ -46,17 +36,19 @@ Highlight of my notes:
 - Cofactors are the way to go. Where the heck does the determinant come from anyway? What does it have to do with cross products?
 
 $$
+
 \begin{align*}
 \text{cross products have nice properties (area)} &\rightarrow \text{area formed by transformed basis vectors}
 \\ &\rightarrow \text{size of a matrix defined to be that area}
 \\ &\rightarrow \text{algebraic formula for determinant involves cofactors}
 \end{align*}
+
 $$
 
 - Row/col operations help with minor expansion.
 
 
-Cross product, $\overset{\rightharpoonup}{x}=\overset{\rightharpoonup}{v}\times \overset{\rightharpoonup}{w}$, properties:
+Cross product, $\overset{\rightharpoonup}{% raw %}{{% endraw%}x{% raw %}}{% endraw%} =\overset{\rightharpoonup}{v}\times \overset{\rightharpoonup}{w}$, properties:
 1. Perpendicular: $\overset{\rightharpoonup}{x}\cdot \overset{\rightharpoonup}{v}=\overset{\rightharpoonup}{x}\cdot\overset{\rightharpoonup}{w}=0$
 2. Area: $\overset{\rightharpoonup}{x}=\text{area of parallelogram spanned by}\overset{\rightharpoonup}{v} \text{ and } \overset{\rightharpoonup}{w}=\|\|\overset{\rightharpoonup}{v}\|\| \text{ } \|\|\overset{\rightharpoonup}{w}\|\| \sin\theta$
 3. Sign (right hand rule): index along axis of first, middle finger along second.
