@@ -38,6 +38,13 @@ layout: default
             <a class="chirp-link" href="{{ chirp.url | relative_url }}">
               {{ chirp.date_ | date: date_format }}{%- if chirp.title -%}: {{ chirp.title | escape }}{%- endif -%}
             </a>
+            <span class="post-meta">
+              {{ chirp.content | strip_html | truncate: 100 }}
+              {%- assign content_length = chirp.content | strip_html | size -%}
+              {%- if content_length > 50 -%}
+                ...
+              {%- endif -%}
+            </span>
           </h6>
           {%- if site.show_excerpts -%}
             {{ chirp.excerpt }}
@@ -70,6 +77,13 @@ layout: default
             <a class="post-link" href="{{ problem.url | relative_url }}">
               {{ problem.date_ | date: date_format }}: {{ problem.title | escape }}
             </a>
+            <span class="post-meta">
+              {{ problem.content | strip_html | truncate: 100 }}
+              {%- assign content_length = problem.content | strip_html | size -%}
+              {%- if content_length > 50 -%}
+                ...
+              {%- endif -%}
+            </span>
           </h6>
         </li>
         {%- endfor -%}
@@ -96,6 +110,13 @@ layout: default
             <a class="post-link" href="{{ project.url | relative_url }}">
               {{ project.title | escape }}
             </a>
+            <span class="post-meta">
+              {{ project.content | strip_html | truncate: 100 }}
+              {%- assign content_length = project.content | strip_html | size -%}
+              {%- if content_length > 50 -%}
+                ...
+              {%- endif -%}
+            </span>
           </h6>
         </li>
         {%- endfor -%}
@@ -122,6 +143,13 @@ layout: default
             <a class="post-link" href="{{ reference.url | relative_url }}">
               {{ reference.title | escape }}
             </a>
+            <span class="post-meta">
+              {{ reference.content | strip_html | truncate: 100 }}
+              {%- assign content_length = reference.content | strip_html | size -%}
+              {%- if content_length > 50 -%}
+                ...
+              {%- endif -%}
+            </span>
           </h6>
         </li>
         {%- endfor -%}
