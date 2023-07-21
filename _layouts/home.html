@@ -21,7 +21,7 @@ layout: default
     <summary>
       Chirps
       <span class="post-meta">
-        Like blue bird
+        Thoughts like blue bird
       </span>
     </summary>
 
@@ -32,12 +32,11 @@ layout: default
       <ul class="post-list">
         {%- assign sorted_chirps = site.chirps | sort: "date" | reverse -%}
         {%- for chirp in sorted_chirps -%}
-        <li>
+        <li class="dated-li">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ chirp.date | date: date_format }}</span>
           <h6>
             <a class="chirp-link" href="{{ chirp.url | relative_url }}">
-              {{ chirp.title | escape }}
+              {{ chirp.date | date: date_format }}: {{ chirp.title | escape }}
             </a>
           </h6>
           {%- if site.show_excerpts -%}
@@ -65,12 +64,11 @@ layout: default
       <ul class="post-list">
         {%- assign sorted_problems = site.problems | sort: "date" | reverse -%}
         {%- for problem in sorted_problems -%}
-        <li>
+        <li class="dated-li">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ problem.date | date: date_format }}</span>
           <h6>
             <a class="post-link" href="{{ problem.url | relative_url }}">
-              {{ problem.title | escape }}
+              {{ problem.date | date: date_format }}: {{ problem.title | escape }}
             </a>
           </h6>
         </li>
@@ -84,7 +82,7 @@ layout: default
     <summary>
       Projects
       <span class="post-meta">
-        Here to show off some data science skills
+        Here to show off some skills!
       </span>
     </summary>
 
