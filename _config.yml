@@ -28,6 +28,10 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  lemongeese
 
 collections:
+  chirps:
+    output: true
+  problems:
+    output: true
   projects:
     output: true
   references:

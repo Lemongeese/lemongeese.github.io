@@ -4,4 +4,4 @@
 
 layout: home
 ---
-This is a quick description of the home page.
+A deep exhale follows a deep inhale.

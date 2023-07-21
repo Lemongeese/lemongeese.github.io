@@ -19,25 +19,29 @@ layout: default
 
   <details>
     <summary>
-      Entries
+      Chirps
+      <span class="post-meta">
+        Like blue bird
+      </span>
     </summary>
 
     <div class="content">
-      {%- if site.posts.size > 0 -%}
+      {%- if site.chirps.size > 0 -%}
 
   <!--<h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>-->
       <ul class="post-list">
-        {%- for post in site.posts -%}
+        {%- assign sorted_chirps = site.chirps | sort: "date" | reverse -%}
+        {%- for chirp in sorted_chirps -%}
         <li>
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <span class="post-meta">{{ chirp.date | date: date_format }}</span>
           <h6>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
+            <a class="chirp-link" href="{{ chirp.url | relative_url }}">
+              {{ chirp.title | escape }}
             </a>
           </h6>
           {%- if site.show_excerpts -%}
-            {{ post.excerpt }}
+            {{ chirp.excerpt }}
           {%- endif -%}
         </li>
         {%- endfor -%}
@@ -50,7 +54,38 @@ layout: default
 
   <details>
     <summary>
+      Problems
+      <span class="post-meta">
+        Includes personal solutions
+      </span>
+    </summary>
+    
+    <div class="content">
+      {%- if site.problems.size > 0  -%}
+      <ul class="post-list">
+        {%- assign sorted_problems = site.problems | sort: "date" | reverse -%}
+        {%- for problem in sorted_problems -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ problem.date | date: date_format }}</span>
+          <h6>
+            <a class="post-link" href="{{ problem.url | relative_url }}">
+              {{ problem.title | escape }}
+            </a>
+          </h6>
+        </li>
+        {%- endfor -%}
+      </ul>
+      {%- endif -%}
+    </div>
+  </details>
+
+  <details>
+    <summary>
       Projects
+      <span class="post-meta">
+        Here to show off some data science skills
+      </span>
     </summary>
 
     <div class="content">
@@ -75,6 +110,9 @@ layout: default
   <details>
     <summary>
       References
+      <span class="post-meta">
+        For others (and myself) to use
+      </span>
     </summary>
 
     <div class="content">
