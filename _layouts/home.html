@@ -30,13 +30,13 @@ layout: default
 
   <!--<h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>-->
       <ul class="post-list">
-        {%- assign sorted_chirps = site.chirps | sort: "date" | reverse -%}
+        {%- assign sorted_chirps = site.chirps | sort: "date_" | reverse -%}
         {%- for chirp in sorted_chirps -%}
         <li class="dated-li">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <h6>
             <a class="chirp-link" href="{{ chirp.url | relative_url }}">
-              {{ chirp.date | date: date_format }}: {{ chirp.title | escape }}
+              {{ chirp.date_ | date: date_format }}{%- if chirp.title -%}: {{ chirp.title | escape }}{%- endif -%}
             </a>
           </h6>
           {%- if site.show_excerpts -%}
@@ -68,7 +68,7 @@ layout: default
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <h6>
             <a class="post-link" href="{{ problem.url | relative_url }}">
-              {{ problem.date | date: date_format }}: {{ problem.title | escape }}
+              {{ problem.date_ | date: date_format }}: {{ problem.title | escape }}
             </a>
           </h6>
         </li>
@@ -102,7 +102,6 @@ layout: default
       </ul>
       {%- endif -%}
     </div>
-
   </details>
 
   <details>
