@@ -292,6 +292,9 @@ summary {
 details {
   @include relative-font-size(1.5);
   margin-bottom: $spacing-unit;
+  > p {
+    @include relative-font-size(1.0);
+  }
 }
 
 details > summary {
@@ -302,6 +305,7 @@ details > summary {
 .details-container details[open]  > span {
   visibility: visible;
 }
+
 
 /**
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/details
