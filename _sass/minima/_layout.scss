@@ -194,7 +194,7 @@
   list-style: none;
 
   > li {
-    margin-bottom: $spacing-unit / 2.0;
+    margin-bottom: 0;
   }
   > .dated-li {
     margin-bottom: 0;
@@ -209,6 +209,18 @@
   font-size: $small-font-size;
   color: $grey-color;
   
+}
+
+.post-tags {
+  display: inline-block;
+  padding: 0 7px;
+  background-color: rgba(167, 215, 245, 0.389);
+  margin-right: 2px;
+  border-radius: 12px;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  font-size: $small-font-size;
+  color: $grey-color;
 }
 
 .post-link {

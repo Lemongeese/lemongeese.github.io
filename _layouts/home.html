@@ -19,17 +19,22 @@ layout: default
 
     <div class="content">
       {%- if site.chirps.size > 0 -%}
-
-  <!--<h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>-->
       <ul class="post-list">
         {%- assign sorted_chirps = site.chirps | sort: "date_" | reverse -%}
         {%- for chirp in sorted_chirps -%}
         <li class="dated-li">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <h6>
-            <a class="chirp-link" href="{{ chirp.url | relative_url }}">
-              {{ chirp.date_ | date: date_format }}{%- if chirp.title -%}: {{ chirp.title | escape }}{%- endif -%}
-            </a>
+            <div>
+              <a class="chirp-link" href="{{ chirp.url | relative_url }}">
+                {{ chirp.date_ | date: date_format }}{%- if chirp.title -%}: {{ chirp.title | escape }}{%- endif -%}
+              </a>
+              
+              {%- for tag in problem.tags -%}
+                <span class="post-tags"> {{ tag }} </span>
+              {%- endfor -%}
+            </div>
+
             <span class="post-meta">
               {{ chirp.content | strip_html | truncate: 100 }}
               {%- assign content_length = chirp.content | strip_html | size -%}
@@ -64,9 +69,14 @@ layout: default
         <li class="dated-li">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
           <h6>
-            <a class="post-link" href="{{ problem.url | relative_url }}">
-              {{ problem.date_ | date: date_format }}: {{ problem.title | escape }}
-            </a>
+            <div>
+              <a class="post-link" href="{{ problem.url | relative_url }}">
+                {{ problem.date_ | date: date_format }}: {{ problem.title | escape }}
+              </a>
+              {%- for tag in problem.tags -%}
+                <span class="post-tags"> {{ tag }} </span>
+              {%- endfor -%}
+            </div>
             <span class="post-meta">
               {{ problem.content | strip_html | truncate: 100 }}
               {%- assign content_length = problem.content | strip_html | size -%}
@@ -94,9 +104,15 @@ layout: default
         {%- for project in sorted_projects -%}
         <li>
           <h6>
-            <a class="post-link" href="{{ project.url | relative_url }}">
-              {{ project.title | escape }}
-            </a>
+            <div>
+              <a class="post-link" href="{{ project.url | relative_url }}">
+                {{ project.title | escape }}
+              </a>
+
+              {%- for tag in problem.tags -%}
+                <span class="post-tags"> {{ tag }} </span>
+              {%- endfor -%}
+            </div>
             <span class="post-meta">
               {{ project.content | strip_html | truncate: 100 }}
               {%- assign content_length = project.content | strip_html | size -%}
