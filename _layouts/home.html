@@ -2,14 +2,6 @@
 layout: default
 ---
 
-<!--
-  1. organize home page to be similar to my daily entries
-	- About
-	- Portfolio
-	- Entries > Months/Year (would like to display title in addition to day)
-	- References
--->
-
 <div class="home">
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
@@ -41,9 +33,7 @@ layout: default
             <span class="post-meta">
               {{ chirp.content | strip_html | truncate: 100 }}
               {%- assign content_length = chirp.content | strip_html | size -%}
-              {%- if content_length > 50 -%}
-                ...
-              {%- endif -%}
+
             </span>
           </h6>
           {%- if site.show_excerpts -%}
@@ -80,9 +70,6 @@ layout: default
             <span class="post-meta">
               {{ problem.content | strip_html | truncate: 100 }}
               {%- assign content_length = problem.content | strip_html | size -%}
-              {%- if content_length > 50 -%}
-                ...
-              {%- endif -%}
             </span>
           </h6>
         </li>
@@ -113,9 +100,6 @@ layout: default
             <span class="post-meta">
               {{ project.content | strip_html | truncate: 100 }}
               {%- assign content_length = project.content | strip_html | size -%}
-              {%- if content_length > 50 -%}
-                ...
-              {%- endif -%}
             </span>
           </h6>
         </li>
@@ -146,9 +130,6 @@ layout: default
             <span class="post-meta">
               {{ reference.content | strip_html | truncate: 100 }}
               {%- assign content_length = reference.content | strip_html | size -%}
-              {%- if content_length > 50 -%}
-                ...
-              {%- endif -%}
             </span>
           </h6>
         </li>
