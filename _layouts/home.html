@@ -64,7 +64,7 @@ layout: default
     <div class="content">
       {%- if site.problems.size > 0  -%}
       <ul class="post-list">
-        {%- assign sorted_problems = site.problems | sort: "date" | reverse -%}
+        {%- assign sorted_problems = site.problems | sort: "date" -%}
         {%- for problem in sorted_problems -%}
         <li class="dated-li">
           {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
